@@ -6,8 +6,8 @@ export class NavBar extends React.Component{
       return (
         <div className="navbar">
           <div className="options">
-            <HomeButton />
-            <NewButton />
+            <HomeButton homeClicked={this.props.homeClicked}/>
+            <NewButton createNewContact={this.props.createNewContact}/>
           </div>
         </div>
       );

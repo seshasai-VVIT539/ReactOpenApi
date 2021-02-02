@@ -2,9 +2,13 @@ export class ShowContact extends React.Component{
   constructor(props){
     super(props);
     this.edit=this.handleEdit.bind(this);
+    this.deleteContact=this.deleteContact.bind(this);
   }
   handleEdit(){
     this.props.handleEdit();
+  }
+  deleteContact(){
+    this.props.deleteContact();
   }
   render(){
     return (
@@ -13,7 +17,7 @@ export class ShowContact extends React.Component{
               <div className="details-heading name">{this.props.contact.Name}</div>
               <div className="options">
                   <button className="option" onClick={this.edit}><i className="fa fa-edit"></i> Edit</button>
-                  <button className="option" onClick="deleteContact()"><i className="fa fa-trash"></i> Delete</button>
+                  <button className="option" onClick={this.deleteContact} ><i className="fa fa-trash"></i> Delete</button>
               </div>
           </div>
           <div className="details">

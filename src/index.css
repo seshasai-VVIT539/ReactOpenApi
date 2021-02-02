@@ -99,3 +99,11 @@ body {
   vertical-align: middle;
   padding: 5px;
 }
+.req{
+  color: red;
+}
+#nameError, #mailError, #phoneError, #landLineError, #websiteError, #addressError {
+  color: red;
+  padding-top: 5px;
+  font-size: 12px;
+}
